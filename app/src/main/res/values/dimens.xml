@@ -3,4 +3,14 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_main_text_size">40sp</dimen>
+
+    <dimen name="activity_main_button_number_width">40dp</dimen>
+    <dimen name="activity_main_button_number_height">40dp</dimen>
+
+
+    <dimen name="activity_main_button_operator_width">50dp</dimen>
+    <dimen name="activity_main_button_operator_height">40dp</dimen>
+
+
+
 </resources>

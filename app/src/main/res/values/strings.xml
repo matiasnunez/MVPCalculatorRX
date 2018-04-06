@@ -1,6 +1,20 @@
 <resources>
-    <string name="app_name">Android</string>
-    <string name="intial_value">0</string>
-    <string name="inc">inc</string>
-    <string name="reset">reset</string>
+    <string name="app_name">Calculator</string>
+
+    <string name="calculator_zero">0</string>
+    <string name="calculator_one">1</string>
+    <string name="calculator_two">2</string>
+    <string name="calculator_three">3</string>
+    <string name="calculator_four">4</string>
+    <string name="calculator_five">5</string>
+    <string name="calculator_six">6</string>
+    <string name="calculator_seven">7</string>
+    <string name="calculator_eight">8</string>
+    <string name="calculator_nine">9</string>
+    <string name="calculator_addition">+</string>
+    <string name="calculator_substraction">-</string>
+    <string name="calculator_divide">/</string>
+    <string name="calculator_multiplication">X</string>
+    <string name="calculator_equal">=</string>
+
 </resources>
