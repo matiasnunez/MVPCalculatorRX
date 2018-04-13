@@ -1,150 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@color/colorAccent"
-    android:gravity="center">
+    >
 
 
-    <TextView
-        android:id="@+id/display_text"
-        android:layout_width="120dp"
-        android:layout_height="30dp"
-       android:background="@android:color/white"
-        android:gravity="center_horizontal"
-        android:textSize="20sp" />
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
-    <Button
-        android:id="@+id/seven_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/display_text"
-        android:text="7" />
 
-    <Button
-        android:id="@+id/eight_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/display_text"
-        android:layout_toEndOf="@id/seven_button"
-        android:layout_toRightOf="@id/seven_button"
-        android:text="8" />
+        <TextView
+            android:id="@+id/display_text_all_digits"
+            android:layout_width="@dimen/activity_main_text_view_width"
+            android:layout_height="@dimen/activity_main_text_view_height"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textSize="@dimen/activity_main_display_text_size"
+            android:maxLength="@integer/activity_main_max_digits"
 
-    <Button
-        android:id="@+id/nine_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/display_text"
-        android:layout_toEndOf="@id/eight_button"
-        android:layout_toRightOf="@id/eight_button"
-        android:text="9" />
+            />
 
-    <Button
-        android:id="@+id/division_button"
-        android:layout_width="@dimen/activity_main_button_operator_width"
-        android:layout_height="@dimen/activity_main_button_operator_height"
-        android:layout_below="@id/display_text"
-        android:layout_toEndOf="@id/nine_button"
-        android:layout_toRightOf="@id/nine_button"
-        android:text="/" />
 
-    <Button
-        android:id="@+id/multiplication_button"
-        android:layout_width="@dimen/activity_main_button_operator_width"
-        android:layout_height="@dimen/activity_main_button_operator_height"
-        android:layout_below="@id/division_button"
-        android:layout_toEndOf="@id/nine_button"
-        android:layout_toRightOf="@id/nine_button"
-        android:text="X" />
+        <TextView
+            android:id="@+id/display_text"
+            android:layout_width="@dimen/activity_main_text_view_width"
+            android:layout_height="@dimen/activity_main_text_view_height"
+            android:layout_below="@id/display_text_all_digits"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textSize="@dimen/activity_main_display_text_size"
+            android:maxLength="@integer/activity_main_max_digits"
 
-    <Button
-        android:id="@+id/addition_button"
-        android:layout_width="@dimen/activity_main_button_operator_width"
-        android:layout_height="@dimen/activity_main_button_operator_height"
-        android:layout_below="@id/multiplication_button"
-        android:layout_toEndOf="@id/nine_button"
-        android:layout_toRightOf="@id/nine_button"
-        android:text="+" />
+            />
 
-    <Button
-        android:id="@+id/subtraction_button"
-        android:layout_width="@dimen/activity_main_button_operator_width"
-        android:layout_height="@dimen/activity_main_button_operator_height"
-        android:layout_below="@id/addition_button"
-        android:layout_toEndOf="@id/nine_button"
-        android:layout_toRightOf="@id/nine_button"
-        android:text="+" />
 
-    <Button
-        android:id="@+id/equal_button"
-        android:layout_width="@dimen/activity_main_button_operator_width"
-        android:layout_height="@dimen/activity_main_button_operator_height"
-        android:layout_below="@id/subtraction_button"
-        android:layout_toEndOf="@id/nine_button"
-        android:layout_toRightOf="@id/nine_button"
-        android:text="=" />
 
-    <Button
-        android:id="@+id/four_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/seven_button"
-        android:text="4" />
 
-    <Button
-        android:id="@+id/five_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/eight_button"
-        android:layout_toEndOf="@id/four_button"
-        android:layout_toRightOf="@id/four_button"
-        android:text="5" />
 
-    <Button
-        android:id="@+id/six_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/nine_button"
-        android:layout_toEndOf="@id/five_button"
-        android:layout_toRightOf="@id/five_button"
-        android:text="6" />
+        <Button
+            android:id="@+id/seven_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/display_text"
+            android:text="@string/calculator_seven"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
-    <Button
-        android:id="@+id/one_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/four_button"
-        android:text="1" />
+        <Button
+            android:id="@+id/eight_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/display_text"
+            android:layout_toEndOf="@id/seven_button"
+            android:layout_toRightOf="@id/seven_button"
+            android:text="@string/calculator_eight"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
-    <Button
-        android:id="@+id/two_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/five_button"
-        android:layout_toEndOf="@id/one_button"
-        android:layout_toRightOf="@id/one_button"
-        android:text="2" />
+        <Button
+            android:id="@+id/nine_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/display_text"
+            android:layout_toEndOf="@id/eight_button"
+            android:layout_toRightOf="@id/eight_button"
+            android:text="@string/calculator_nine"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
-    <Button
-        android:id="@+id/three_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/six_button"
-        android:layout_toEndOf="@id/two_button"
-        android:layout_toRightOf="@id/two_button"
-        android:text="3" />
+        <Button
+            android:id="@+id/division_button"
+            android:layout_width="@dimen/activity_main_button_operator_width"
+            android:layout_height="@dimen/activity_main_button_operator_height"
+            android:layout_below="@id/display_text"
+            android:layout_toEndOf="@id/nine_button"
+            android:layout_toRightOf="@id/nine_button"
+            android:text="@string/calculator_divide"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
-    <Button
-        android:id="@+id/zero_button"
-        android:layout_width="@dimen/activity_main_button_number_width"
-        android:layout_height="@dimen/activity_main_button_number_height"
-        android:layout_below="@id/two_button"
-        android:layout_toEndOf="@id/one_button"
-        android:layout_toRightOf="@id/one_button"
-        android:text="0" />
+        <Button
+            android:id="@+id/multiplication_button"
+            android:layout_width="@dimen/activity_main_button_operator_width"
+            android:layout_height="@dimen/activity_main_button_operator_height"
+            android:layout_below="@id/division_button"
+            android:layout_toEndOf="@id/nine_button"
+            android:layout_toRightOf="@id/nine_button"
+            android:text="@string/calculator_multiplication"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/addition_button"
+            android:layout_width="@dimen/activity_main_button_operator_width"
+            android:layout_height="@dimen/activity_main_button_operator_height"
+            android:layout_below="@id/multiplication_button"
+            android:layout_toEndOf="@id/nine_button"
+            android:layout_toRightOf="@id/nine_button"
+            android:text="@string/calculator_addition"
+            android:textSize="@dimen/activity_main_button_text_size" />
 
+        <Button
+            android:id="@+id/subtraction_button"
+            android:layout_width="@dimen/activity_main_button_operator_width"
+            android:layout_height="@dimen/activity_main_button_operator_height"
+            android:layout_below="@id/addition_button"
+            android:layout_toEndOf="@id/nine_button"
+            android:layout_toRightOf="@id/nine_button"
+            android:text="@string/calculator_substraction"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/equal_button"
+            android:layout_width="@dimen/activity_main_button_operator_width"
+            android:layout_height="@dimen/activity_main_button_operator_height"
+            android:layout_below="@id/subtraction_button"
+            android:layout_toEndOf="@id/nine_button"
+            android:layout_toRightOf="@id/nine_button"
+            android:text="@string/calculator_equal"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/four_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/seven_button"
+            android:text="@string/calculator_four"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/five_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/eight_button"
+            android:layout_toEndOf="@id/four_button"
+            android:layout_toRightOf="@id/four_button"
+            android:text="5"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/six_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/nine_button"
+            android:layout_toEndOf="@id/five_button"
+            android:layout_toRightOf="@id/five_button"
+            android:text="@string/calculator_six"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/one_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/four_button"
+            android:text="@string/calculator_one"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/two_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/five_button"
+            android:layout_toEndOf="@id/one_button"
+            android:layout_toRightOf="@id/one_button"
+            android:text="@string/calculator_two"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/three_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/six_button"
+            android:layout_toEndOf="@id/two_button"
+            android:layout_toRightOf="@id/two_button"
+            android:text="@string/calculator_three"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+
+        <Button
+            android:id="@+id/delete_last_digit_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/three_button"
+            android:layout_toEndOf="@id/two_button"
+            android:layout_toRightOf="@id/two_button"
+            android:text="@string/calculator_delete"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/delete_all_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/one_button"
+            android:text="@string/calculator_delete_all"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+        <Button
+            android:id="@+id/zero_button"
+            android:layout_width="@dimen/activity_main_button_number_width"
+            android:layout_height="@dimen/activity_main_button_number_height"
+            android:layout_below="@id/two_button"
+            android:layout_toEndOf="@id/one_button"
+            android:layout_toRightOf="@id/one_button"
+            android:text="@string/calculator_zero"
+            android:textSize="@dimen/activity_main_button_text_size" />
+
+    </RelativeLayout>
+
+</FrameLayout>

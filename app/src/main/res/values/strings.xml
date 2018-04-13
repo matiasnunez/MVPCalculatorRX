@@ -16,5 +16,10 @@
     <string name="calculator_divide">/</string>
     <string name="calculator_multiplication">X</string>
     <string name="calculator_equal">=</string>
+    <string name="calculator_delete">C</string>
+    <string name="calculator_delete_all">CE</string>
+
+    <string name="calculator_error">ERROR</string>
+
 
 </resources>

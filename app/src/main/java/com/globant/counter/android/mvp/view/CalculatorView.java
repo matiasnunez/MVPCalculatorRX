@@ -13,6 +13,7 @@ import butterknife.OnClick;
 
 public class CalculatorView extends ActivityView {
 
+    @BindView(R.id.display_text_all_digits) TextView displayAllDigits;
     @BindView(R.id.display_text) TextView displayText;
     Activity activity;
 
@@ -41,6 +42,11 @@ public class CalculatorView extends ActivityView {
     @OnClick(R.id.three_button)
     public void threeButtonPressed() {
         buttonPressed(activity.getString(R.string.calculator_three));
+    }
+
+    @OnClick(R.id.four_button)
+    public void fourButtonPressed() {
+        buttonPressed(activity.getString(R.string.calculator_four));
     }
 
     @OnClick(R.id.five_button)
@@ -90,7 +96,22 @@ public class CalculatorView extends ActivityView {
 
     @OnClick(R.id.equal_button)
     public void equalButtonPressed() {
-        buttonPressed(activity.getString(R.string.calculator_equal));
+        //checks that the division won't be by zero
+        if (displayAllDigits.getText().toString().contains("/0")) {
+            setDisplayText(activity.getString(R.string.calculator_error));
+        } else {
+            buttonPressed(activity.getString(R.string.calculator_equal));
+        }
+    }
+
+    @OnClick(R.id.delete_all_button)
+    public void deleteAllButtonPressed() {
+        buttonPressed(activity.getString(R.string.calculator_delete_all));
+    }
+
+    @OnClick(R.id.delete_last_digit_button)
+    public void deleteLastDigitButtonPressed() {
+        buttonPressed(activity.getString(R.string.calculator_delete));
     }
 
     public void buttonPressed(String digit) {
@@ -98,10 +119,16 @@ public class CalculatorView extends ActivityView {
     }
 
     public void setDisplayText(String digit) {
+        digit = digit.replace(".0", "");
         displayText.setText(digit);
     }
 
+    public void setDisplayAllText(String allDigits) {
+        displayAllDigits.setText(allDigits);
+    }
+
 }
+
 
 
 
