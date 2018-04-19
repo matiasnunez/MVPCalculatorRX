@@ -62,11 +62,10 @@ public class CalculatorModel {
     }
 
 
-    public String getTotal() throws RuntimeException {
+    public String getTotal(){
         double total = 0;
 
-        try {
-            for (int i = 0; i <= digitsList.size() - 2; i++) {
+             for (int i = 0; i <= digitsList.size() - 2; i++) {
                 //operates with the first 3 digits in the list
                 if (i == 0) {
                     total += calculateTotal(Integer.parseInt(digitsList.get(i)), digitsList.get(i + 1), Integer.parseInt(digitsList.get(i + 2)));
@@ -76,10 +75,6 @@ public class CalculatorModel {
                 }
                 i++;
             }
-        } catch (RuntimeException e) {
-            return "";
-        }
-
 
         return total + "";
     }
@@ -99,7 +94,7 @@ public class CalculatorModel {
     }
 
 
-    public double calculateTotal(double val1, String operator, int val2) throws RuntimeException {
+    public double calculateTotal(double val1, String operator, int val2) {
         double total = 0;
         switch (operator) {
 
